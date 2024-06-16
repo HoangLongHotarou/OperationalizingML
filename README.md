@@ -89,7 +89,7 @@ The blade setting for deploy the model endpoint
 
 1. Pipeline completed run
     ![alt text](./img/image-31.png)
-    The duration is has the short time (just 2s) because in AutoMLStep enable allow_reuse
+    The duration has the short time (just 2s) because in AutoMLStep enable allow_reuse
     ![alt text](./img/image-33.png)
     ![alt text](./img/image-32.png)
 
