@@ -1,0 +1,4 @@
+2024-06-16 10:24:44.561 - INFO - 31363 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetBestChild
+2024-06-16 10:24:44.592 - INFO - 31363 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-06-16 10:24:44.732 - INFO - 31363 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=139.9[ms]
+2024-06-16 10:24:44.819 - INFO - 31363 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetBestChild, HowEnded=Success, Duration=257.11[ms]
