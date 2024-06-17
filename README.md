@@ -41,10 +41,10 @@ Using the AzureML Pipeline Parallel to improve the AzureML pipeline
 1. Run the AutoML pipeline find the best model
     ![alt text](./img/image-10.png)
 
-1. The best model: Voting Ensemble
+1. The best model: Voting Ensemble algorithm
     ![alt text](./img/image-13.png)
 
-    Overview:
+    Overview: the Voting Ensemble model achieved the highest acurray with a score of 0.91351
     ![alt text](./img/image-12.png)
     
     Metric:
