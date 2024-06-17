@@ -2,7 +2,7 @@
 ## Table of contents
 - [Operationalizing AzureML](#operationalizing-azureml)
     - [Overview](#overview)
-    - [Architectural Diagram](#prepare-the-vm)
+    - [Architectural Diagram](#architectural-diagram)
     - [Improve the project in the future](#improve-the-project-in-the-future)
     - [Key Steps](#key-steps)
         - [Create a new AutoML run](#create-a-new-automl-run)
