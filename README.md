@@ -14,7 +14,7 @@
 ## Overview
 <p>This project is part of the Udacity Azure ML Nanodegree.</p>
 
-The target of project is to help understand the pipeline process for releasing the model endpoint. The project is about the Bank marketing campain. I trained and identified the best model using the **AutoML** feature of **AzureML** service, utilizing the [Bank Marketing dataset](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) dataset, I deployed the model into the production using the Azure Container Instance (ACI) service and consumed it using the REST endpoint. I also created the AzureML Pipeline, which can be reused and triggered by a webhook. 
+The target of project is to help understand the pipeline process for releasing the model endpoint. The project is about the Bank marketing campain. I trained and identified the best model using the **AutoML** feature of **AzureML** service, utilizing the [Bank Marketing dataset](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) dataset, I deployed the model into the production using the Azure Container Instance (ACI) service and consumed it using the REST endpoint. I also created and published the AzureML Pipeline, which can be reused and triggered by a webhook. 
 
 ## Architectural Diagram
 ![alt text](./img/image-1.png)
