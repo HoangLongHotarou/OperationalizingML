@@ -120,7 +120,7 @@ The setting page for deploying the endpoint based on the model
     ![alt text](./img/image-32.png)
 
 ## Screen Recording
-https://youtu.be/1wiR52wcl4k?si=Yy20EGZuKRubUM1Y
+https://youtu.be/pUH3W8Ae5Vs
 
 ## Standout Suggestions
 Export the ONNX best model:
