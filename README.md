@@ -1,12 +1,12 @@
 # Operationalizing AzureML
 <p>This project is part of the Udacity Azure ML Nanodegree.</p>
 
-The target of project is to help understand the pipeline process for releasing the model endpoint. The project is about the Bank marketing campain. I trained and fined the best model using the **AutoML** feature of **AzureML** service, deployed it into the production using the Azure Container Instance (ACI) service and consumed it using the REST endpoint. I also created the AzureML Pipeline, which can be reused and triggered by webhook. 
+The target of project is to help understand the pipeline process for releasing the model endpoint. The project is about the Bank marketing campain. I trained and found the best model using the **AutoML** feature of **AzureML** service, deployed it into the production using the Azure Container Instance (ACI) service and consumed it using the REST endpoint. I also created the AzureML Pipeline, which can be reused and triggered by webhook. 
 
 ## Architectural Diagram
 ![alt text](./img/image-7.png)
-- Create the Pipeline:
-    - Register the Dataset
+- Create the Pipeline: The pipeline is created by the 
+    - Register the Dataset: 
     - AutoML run:
     - Find the best model:
 - Export the onnx model:
