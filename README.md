@@ -1,17 +1,32 @@
 # Operationalizing AzureML
+## Table of contents
+- [Operationalizing AzureML](#operationalizing-azureml)
+    - [Overview](#overview)
+    - [Architectural Diagram](#prepare-the-vm)
+    - [Improve the project in the future](#improve-the-project-in-the-future)
+    - [Key Steps](#key-steps)
+        - [Create a new AutoML run](#create-a-new-automl-run)
+        - [Deploy a model and consume a model endpoint via an HTTP API](#deploy-a-model-and-consume-a-model-endpoint-via-an-http-api)
+        - [Publish an ML Pipeline](#publish-an-ml-pipeline)
+    - [Screen Recording](#screen-recording)
+    - [Standout Suggestions](#standout-suggestions)
+
+## Overview
 <p>This project is part of the Udacity Azure ML Nanodegree.</p>
 
-The target of project is to help understand the pipeline process for releasing the model endpoint. The project is about the Bank marketing campain. I trained and found the best model using the **AutoML** feature of **AzureML** service, deployed it into the production using the Azure Container Instance (ACI) service and consumed it using the REST endpoint. I also created the AzureML Pipeline, which can be reused and triggered by webhook. 
+The target of project is to help understand the pipeline process for releasing the model endpoint. The project is about the Bank marketing campain. I trained and identified the best model using the **AutoML** feature of **AzureML** service, utilizing the [Bank Marketing dataset](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) dataset, I deployed the model into the production using the Azure Container Instance (ACI) service and consumed it using the REST endpoint. I also created the AzureML Pipeline, which can be reused and triggered by a webhook. 
 
 ## Architectural Diagram
-![alt text](./img/image-7.png)
-- Create the Pipeline: The pipeline is created by the 
-    - Register the Dataset: 
-    - AutoML run:
-    - Find the best model:
-- Export the onnx model:
-- Deploy Model Endpoint: 
-- Consume the model endpoint and read the swagger:
+![alt text](./img/image-1.png)
+- Create the Pipeline: The pipeline is created by the python SDK. The pipeline stage include:
+    - Get the Bank Marketing Dataset  
+    - AutoML run
+    - Identify the best model 
+- Export the ONNX model: When the pipeline is finished, the best model is exported as an ONNX model.
+- Deploy Model Endpoint: the Best Model is deployed using ACI, with Application Insight enabled to monitor the ACI
+- Consume the model endpoint and read the Swagger: User can use the REST endpoint exposed by the Model Endpoint to predict the dataset. Swagger Documentation is available to help users understand how to use the REST endpoint.
+- Publish the pipeline: The pipline is published using python SDK, allowing for future reuse.
+- Consume the pipeline: User can submit the published pipline to run the training job again.
 
 ## Improve the project in the future
 Using the AzureML Pipeline Parallel to improve the AzureML pipeline
@@ -39,7 +54,7 @@ Using the AzureML Pipeline Parallel to improve the AzureML pipeline
 #### Step 1: Deploy the model endpoint
 When we have the best model, using the best model to deploy the model endpoint service uing Azure Container Instance and we can access endpoint by REST API, and enable the authentication which make the service is secure.
 
-The blade setting for deploy the model endpoint
+The setting page for deploying the endpoint based on the model
 ![alt text](./img/image-14.png)
 
 #### Step 2: Enable the application insights
@@ -91,7 +106,11 @@ The blade setting for deploy the model endpoint
     ![alt text](./img/image-30.png)
 
 1. Use a REST endpoint to interact with a Pipeline
+    
+    The published pipeline overview page
     ![alt text](./img/image-27.png)
+    
+    In the jupyter notebook, I consumed the publised pipeline endpoint to submit pipeline run.
     ![alt text](./img/image-28.png)
 
 1. Pipeline completed run
